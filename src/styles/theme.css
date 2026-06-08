@@ -1,0 +1,263 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Typography System - Studio9DN */
+  --font-primary: 'Clash Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-secondary: 'Rowan', Georgia, serif;
+  
+  /* Font Sizes - Exact Specifications */
+  --font-size: 16px;
+  --text-h1: 4.5rem; /* 72pt */
+  --text-h2: 1.5rem; /* 24pt */
+  --text-h3: 1.125rem; /* 18pt */
+  --text-h4: 0.5625rem; /* 9pt */
+  --text-body-lg: 0.875rem; /* 14pt */
+  --text-body: 0.75rem; /* 12pt */
+  
+  /* Line Heights & Margins */
+  --h1-margin: 3.75rem; /* 60pt */
+  --h2-margin: 1.5rem; /* 24pt */
+  --h3-margin: 1.125rem; /* 18pt */
+  --h4-margin: 0.5625rem; /* 9pt */
+  --body-margin-lg: 1.05rem; /* 16.8pt */
+  --body-margin: 0.9rem; /* 14.4pt */
+  
+  /* Color System - Studio9DN Forest */
+  --forest: #434A36;
+  --forest-rgb: 76, 74, 54;
+  --forest-20: rgba(76, 74, 54, 0.2);
+  --forest-40: rgba(76, 74, 54, 0.4);
+  --forest-60: rgba(76, 74, 54, 0.6);
+  --forest-80: rgba(76, 74, 54, 0.8);
+  
+  --off-white: #FAFAF9;
+  --off-black: #1A1A18;
+  --background: var(--off-white);
+  --foreground: var(--off-black);
+  
+  /* UI Colors */
+  --card: #ffffff;
+  --card-foreground: var(--off-black);
+  --popover: #ffffff;
+  --popover-foreground: var(--off-black);
+  --primary: var(--forest);
+  --primary-foreground: var(--off-white);
+  --secondary: var(--forest-20);
+  --secondary-foreground: var(--forest);
+  --muted: #F5F5F4;
+  --muted-foreground: #78716C;
+  --accent: var(--forest-40);
+  --accent-foreground: var(--off-black);
+  --destructive: #DC2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(76, 74, 54, 0.12);
+  --input: transparent;
+  --input-background: #FAFAF9;
+  --switch-background: #E7E5E4;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
+  --ring: var(--forest-40);
+  
+  /* Charts */
+  --chart-1: var(--forest);
+  --chart-2: var(--forest-60);
+  --chart-3: var(--forest-40);
+  --chart-4: var(--forest-20);
+  --chart-5: #A8A29E;
+  
+  /* Radius - Minimal */
+  --radius: 0.125rem;
+  
+  /* Sidebar */
+  --sidebar: var(--off-white);
+  --sidebar-foreground: var(--off-black);
+  --sidebar-primary: var(--forest);
+  --sidebar-primary-foreground: var(--off-white);
+  --sidebar-accent: var(--forest-20);
+  --sidebar-accent-foreground: var(--forest);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--forest-40);
+}
+
+.dark {
+  --off-white: #1A1A18;
+  --off-black: #FAFAF9;
+  --background: var(--off-white);
+  --foreground: var(--off-black);
+  --card: #262622;
+  --card-foreground: var(--off-black);
+  --popover: #262622;
+  --popover-foreground: var(--off-black);
+  --primary: #6B7560;
+  --primary-foreground: var(--off-black);
+  --secondary: var(--forest-40);
+  --secondary-foreground: var(--off-black);
+  --muted: #292924;
+  --muted-foreground: #A8A29E;
+  --accent: var(--forest-60);
+  --accent-foreground: var(--off-black);
+  --border: rgba(168, 162, 158, 0.12);
+  --input: rgba(168, 162, 158, 0.12);
+  --ring: var(--forest-60);
+  --sidebar: #1A1A18;
+  --sidebar-foreground: var(--off-black);
+  --sidebar-primary: #6B7560;
+  --sidebar-primary-foreground: var(--off-black);
+  --sidebar-accent: var(--forest-40);
+  --sidebar-accent-foreground: var(--off-black);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--forest-60);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-primary);
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  /* Studio9DN Typography Hierarchy */
+  h1 {
+    font-family: var(--font-primary);
+    font-size: var(--text-h1);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.1;
+    margin-bottom: var(--h1-margin);
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-family: var(--font-secondary);
+    font-size: var(--text-h2);
+    font-weight: var(--font-weight-medium);
+    font-style: normal;
+    line-height: 1.3;
+    margin-bottom: var(--h2-margin);
+  }
+
+  h3 {
+    font-family: var(--font-primary);
+    font-size: var(--text-h3);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    margin-bottom: var(--h3-margin);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  h4 {
+    font-family: var(--font-secondary);
+    font-size: var(--text-h4);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+    margin-bottom: var(--h4-margin);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  p {
+    font-family: var(--font-primary);
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.7;
+    margin-bottom: var(--body-margin);
+  }
+
+  label {
+    font-family: var(--font-primary);
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-family: var(--font-primary);
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-family: var(--font-primary);
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  /* Ensure smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* High-quality text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Hide scrollbar for horizontal galleries */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
